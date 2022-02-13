@@ -18,9 +18,20 @@ class Recipe:Identifiable, Decodable {
     var cookTime:String
     var totalTime:String
     var servings:Int
-    var ingredients:[String]
+    var ingredients:[Indgredient]
+    var highlights:[String]
     var directions:[String]
     // If you don't care about some of the data,
     // there's no need to create a property.
+    
+}
+
+class Indgredient:Identifiable, Decodable {
+    
+    var id:UUID?
+    var name:String
+    var num:Int?
+    var denom:Int?
+    var unit:String?
     
 }

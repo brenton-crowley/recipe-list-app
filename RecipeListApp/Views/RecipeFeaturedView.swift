@@ -19,7 +19,8 @@ struct RecipeFeaturedView: View {
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .padding(.leading)
-                .padding(.top,50)
+                .padding(.top, 25)
+                .offset(y: 40)
             
             GeometryReader { geo in
                 TabView {
@@ -46,10 +47,11 @@ struct RecipeFeaturedView: View {
                             .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.2), radius: 10, x: -5, y: 5)
                     }
                     
-                }.tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
-                    .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+                }
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
+                .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
                 
-            }.padding(.bottom, 20)
+            }
             
             VStack (alignment: .leading, spacing: 5) {
                 Text("Prepration Time: ")

@@ -20,9 +20,7 @@ struct RecipeDetailView: View {
                 // MARK: Image
                 Image(recipe.image)
                     . resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .scaledToFit()
-                    .frame(height: 200)
+                    .scaledToFill()
                 
                 // MARK: Recipe Name
                 Text(recipe.name)

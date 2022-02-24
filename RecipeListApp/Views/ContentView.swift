@@ -39,8 +39,13 @@ struct ContentView: View {
                                         .clipped()
                                         .cornerRadius(5
                                         )
-                                    Text(recipe.name)
-                                        .foregroundColor(.black)
+                                    VStack (alignment: .leading, spacing: 5) {
+                                        Text(recipe.name)
+                                            .foregroundColor(.black)
+                                        RecipeHighlightsView(highlights: recipe.highlights)
+                                            .font(.caption)
+                                            .foregroundColor(.gray)
+                                    }
                                     
                                 }
                             }

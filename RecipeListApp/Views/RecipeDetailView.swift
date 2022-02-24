@@ -19,7 +19,7 @@ struct RecipeDetailView: View {
             VStack (alignment:.leading) {
                 // MARK: Image
                 Image(recipe.image)
-                    . resizable()
+                    .resizable()
                     .scaledToFill()
                 
                 // MARK: Recipe Name

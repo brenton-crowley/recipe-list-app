@@ -11,6 +11,9 @@ struct RecipeFeaturedView: View {
     
     @EnvironmentObject var recipeModel:RecipeModel
     @State var isDetailViewShowing = false
+    @State var selectedTab:Int = 0
+    
+    var featuredRecipes:[Recipe] { recipeModel.recipes.filter({ $0.featured == true}) }
     
     var body: some View {
         
@@ -24,15 +27,16 @@ struct RecipeFeaturedView: View {
                 .offset(y: 40)
             
             GeometryReader { geo in
-                TabView {
+                TabView(selection: $selectedTab) {
                     
-                    let featuredRecipes = recipeModel.recipes.filter({ $0.featured == true})
-                    
-                    ForEach(featuredRecipes) { recipe in
+                    ForEach(featuredRecipes.indices) { index in
+                        
+                        let recipe = featuredRecipes[index]
                         
                         Button {
                             // Show the recipe detail sheet.
                             self.isDetailViewShowing = true
+                            self.selectedTab = index
                         } label: {
                             ZStack {
                                 // Recipe Card
@@ -49,6 +53,7 @@ struct RecipeFeaturedView: View {
                                 }
                             }
                         }
+                        .tag(index)
                         .buttonStyle(PlainButtonStyle())
                         .frame(width: geo.size.width - 40, height: geo.size.height - 100)
                         .cornerRadius(15)
@@ -69,12 +74,17 @@ struct RecipeFeaturedView: View {
             }
             
             VStack (alignment: .leading, spacing: 5) {
+                
+                
+                
                 Text("Prepration Time: ")
                     .font(.headline)
-                Text("Prepration 1 Hour: ")
+                Text(featuredRecipes[selectedTab].prepTime)
                 Text("Highlights: ")
                     .font(.headline)
-                Text("Healthy, Hearty: ")
+                
+                RecipeHighlightsView(highlights: featuredRecipes[selectedTab].highlights)
+                
             }.padding([.leading, .bottom])
         }
         

@@ -15,6 +15,7 @@ struct RecipeHighlightsView: View {
         
         if let highlights = highlights {
             Text(highlights.joined(separator: ", "))
+                .font(AppFonts.regular)
         } else {
             Text("It's awesome!")
         }

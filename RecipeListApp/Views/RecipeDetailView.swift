@@ -24,7 +24,7 @@ struct RecipeDetailView: View {
                 
                 // MARK: Recipe Name
                 Text(recipe.name)
-                    .font(.title2)
+                    .font(AppFonts.title)
                     .fontWeight(.bold)
                     .padding([.horizontal, .bottom])
                 
@@ -32,10 +32,11 @@ struct RecipeDetailView: View {
                 
                 VStack (alignment: .leading) {
                     Text("Choose your serving size")
-                        .font(.footnote)
+                        .font(AppFonts.regularWithSize(13.0))
                     Picker("Choose your serving size", selection: $serving) {
                         ForEach(servingSizes, id: \.self) { size in
                             Text("\(size)").tag(size)
+                                .font(AppFonts.regular)
                         }
                     }
                     .pickerStyle(SegmentedPickerStyle())
@@ -45,7 +46,7 @@ struct RecipeDetailView: View {
                 // MARK: Ingredients
                 VStack (alignment: .leading) {
                     Text("Ingredients")
-                        .font(.title2)
+                        .font(AppFonts.title)
                         .bold()
                         .padding(.vertical, 2)
                     ForEach(recipe.ingredients) { ingredient in
@@ -57,6 +58,7 @@ struct RecipeDetailView: View {
                         
                         Text("• \(portion) \(ingredient.name.lowercased())")
                             .padding(.bottom, 1)
+                            .font(AppFonts.regular)
                     }
                     // MARK: Divider
                     Divider()
@@ -64,7 +66,7 @@ struct RecipeDetailView: View {
                     // MARK: Directions
                     VStack (alignment: .leading) {
                         Text("Directions")
-                            .font(.title2)
+                            .font(AppFonts.title)
                             .bold()
                             .padding(.vertical, 2)
                         ForEach(recipe.directions.indices, id: \.self) { index in
@@ -72,9 +74,11 @@ struct RecipeDetailView: View {
                             let direction = recipe.directions[index]
                             
                             HStack (alignment: .top) {
-                                Text("Step \(index+1)").bold()
+                                Text("Step \(index+1)")
+                                    .font(AppFonts.regularBold)
                                 Text("\(direction)")
                                     .padding(.bottom, 1)
+                                    .font(AppFonts.regular)
                             }
                         }
                     }

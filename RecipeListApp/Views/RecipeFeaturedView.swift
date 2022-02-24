@@ -20,11 +20,11 @@ struct RecipeFeaturedView: View {
         VStack (alignment: .leading, spacing: 0) {
             
             Text("Featured Recipes")
-                .font(.largeTitle)
                 .fontWeight(.bold)
                 .padding(.leading)
                 .padding(.top, 25)
                 .offset(y: 40)
+                .font(AppFonts.title)
             
             GeometryReader { geo in
                 TabView(selection: $selectedTab) {
@@ -50,6 +50,7 @@ struct RecipeFeaturedView: View {
                                         .clipped()
                                     Text(recipe.name)
                                         .padding(5)
+                                        .font(AppFonts.regularBold)
                                 }
                             }
                         }
@@ -78,10 +79,11 @@ struct RecipeFeaturedView: View {
                 
                 
                 Text("Prepration Time: ")
-                    .font(.headline)
+                    .font(AppFonts.regularBold)
                 Text(featuredRecipes[selectedTab].prepTime)
+                    .font(AppFonts.regular)
                 Text("Highlights: ")
-                    .font(.headline)
+                    .font(AppFonts.regularBold)
                 
                 RecipeHighlightsView(highlights: featuredRecipes[selectedTab].highlights)
                 

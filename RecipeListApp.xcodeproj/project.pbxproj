@@ -20,6 +20,17 @@
 		84AA6FBD27A7B0C2003F2047 /* recipes.json in Resources */ = {isa = PBXBuildFile; fileRef = 84AA6FBC27A7B0C2003F2047 /* recipes.json */; };
 		84AEB22C27C35C7000DD9918 /* Rational.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AEB22B27C35C7000DD9918 /* Rational.swift */; };
 		84FA05CD27C73E72003A0FCE /* RecipeHighlightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA05CC27C73E72003A0FCE /* RecipeHighlightsView.swift */; };
+		84FA05D927C74660003A0FCE /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84FA05CF27C74660003A0FCE /* Lato-Regular.ttf */; };
+		84FA05DA27C74660003A0FCE /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84FA05D027C74660003A0FCE /* Lato-Bold.ttf */; };
+		84FA05DB27C74660003A0FCE /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84FA05D127C74660003A0FCE /* Lato-BlackItalic.ttf */; };
+		84FA05DC27C74660003A0FCE /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84FA05D227C74660003A0FCE /* Lato-Black.ttf */; };
+		84FA05DD27C74660003A0FCE /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84FA05D327C74660003A0FCE /* Lato-Italic.ttf */; };
+		84FA05DE27C74660003A0FCE /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84FA05D427C74660003A0FCE /* Lato-LightItalic.ttf */; };
+		84FA05DF27C74660003A0FCE /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84FA05D527C74660003A0FCE /* Lato-BoldItalic.ttf */; };
+		84FA05E027C74660003A0FCE /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84FA05D627C74660003A0FCE /* Lato-ThinItalic.ttf */; };
+		84FA05E127C74660003A0FCE /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84FA05D727C74660003A0FCE /* Lato-Thin.ttf */; };
+		84FA05E227C74660003A0FCE /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84FA05D827C74660003A0FCE /* Lato-Light.ttf */; };
+		84FA05E727C748E5003A0FCE /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FA05E627C748E5003A0FCE /* AppFonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +48,18 @@
 		84AA6FBC27A7B0C2003F2047 /* recipes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipes.json; sourceTree = "<group>"; };
 		84AEB22B27C35C7000DD9918 /* Rational.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rational.swift; sourceTree = "<group>"; };
 		84FA05CC27C73E72003A0FCE /* RecipeHighlightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeHighlightsView.swift; sourceTree = "<group>"; };
+		84FA05CF27C74660003A0FCE /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		84FA05D027C74660003A0FCE /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		84FA05D127C74660003A0FCE /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		84FA05D227C74660003A0FCE /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		84FA05D327C74660003A0FCE /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
+		84FA05D427C74660003A0FCE /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		84FA05D527C74660003A0FCE /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		84FA05D627C74660003A0FCE /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
+		84FA05D727C74660003A0FCE /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
+		84FA05D827C74660003A0FCE /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		84FA05E327C746BA003A0FCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		84FA05E627C748E5003A0FCE /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,15 +92,17 @@
 		84AA6FA127A7AFD7003F2047 /* RecipeListApp */ = {
 			isa = PBXGroup;
 			children = (
-				84AEB22A27C35C3D00DD9918 /* Utilities */,
-				84AA6FBB27A7B0B8003F2047 /* Data */,
-				84AA6FB327A7AFF7003F2047 /* Services */,
-				84AA6FB227A7AFF2003F2047 /* Models */,
-				84AA6FB127A7AFEB003F2047 /* ViewModels */,
-				84AA6FB027A7AFE0003F2047 /* Views */,
+				84FA05E327C746BA003A0FCE /* Info.plist */,
 				84AA6FA227A7AFD7003F2047 /* RecipeListApp.swift */,
 				84AA6FA627A7AFD8003F2047 /* Assets.xcassets */,
+				84AA6FBB27A7B0B8003F2047 /* Data */,
+				84FA05CE27C74635003A0FCE /* Fonts */,
+				84AA6FB227A7AFF2003F2047 /* Models */,
 				84AA6FA827A7AFD8003F2047 /* Preview Content */,
+				84AA6FB327A7AFF7003F2047 /* Services */,
+				84AEB22A27C35C3D00DD9918 /* Utilities */,
+				84AA6FB127A7AFEB003F2047 /* ViewModels */,
+				84AA6FB027A7AFE0003F2047 /* Views */,
 			);
 			path = RecipeListApp;
 			sourceTree = "<group>";
@@ -142,6 +167,24 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		84FA05CE27C74635003A0FCE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				84FA05D227C74660003A0FCE /* Lato-Black.ttf */,
+				84FA05D127C74660003A0FCE /* Lato-BlackItalic.ttf */,
+				84FA05D027C74660003A0FCE /* Lato-Bold.ttf */,
+				84FA05D527C74660003A0FCE /* Lato-BoldItalic.ttf */,
+				84FA05D327C74660003A0FCE /* Lato-Italic.ttf */,
+				84FA05D827C74660003A0FCE /* Lato-Light.ttf */,
+				84FA05D427C74660003A0FCE /* Lato-LightItalic.ttf */,
+				84FA05CF27C74660003A0FCE /* Lato-Regular.ttf */,
+				84FA05D727C74660003A0FCE /* Lato-Thin.ttf */,
+				84FA05D627C74660003A0FCE /* Lato-ThinItalic.ttf */,
+				84FA05E627C748E5003A0FCE /* AppFonts.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,9 +243,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84FA05DC27C74660003A0FCE /* Lato-Black.ttf in Resources */,
+				84FA05E227C74660003A0FCE /* Lato-Light.ttf in Resources */,
+				84FA05E127C74660003A0FCE /* Lato-Thin.ttf in Resources */,
 				84AA6FAA27A7AFD8003F2047 /* Preview Assets.xcassets in Resources */,
+				84FA05DA27C74660003A0FCE /* Lato-Bold.ttf in Resources */,
+				84FA05DB27C74660003A0FCE /* Lato-BlackItalic.ttf in Resources */,
 				84AA6FBD27A7B0C2003F2047 /* recipes.json in Resources */,
 				84AA6FA727A7AFD8003F2047 /* Assets.xcassets in Resources */,
+				84FA05DD27C74660003A0FCE /* Lato-Italic.ttf in Resources */,
+				84FA05E027C74660003A0FCE /* Lato-ThinItalic.ttf in Resources */,
+				84FA05DE27C74660003A0FCE /* Lato-LightItalic.ttf in Resources */,
+				84FA05D927C74660003A0FCE /* Lato-Regular.ttf in Resources */,
+				84FA05DF27C74660003A0FCE /* Lato-BoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +271,7 @@
 				84AEB22C27C35C7000DD9918 /* Rational.swift in Sources */,
 				84AA6FB727A7B024003F2047 /* RecipeModel.swift in Sources */,
 				84AA6FA527A7AFD7003F2047 /* ContentView.swift in Sources */,
+				84FA05E727C748E5003A0FCE /* AppFonts.swift in Sources */,
 				84FA05CD27C73E72003A0FCE /* RecipeHighlightsView.swift in Sources */,
 				84AA6FA327A7AFD7003F2047 /* RecipeListApp.swift in Sources */,
 				84AA6FBA27A7B09B003F2047 /* DataService.swift in Sources */,
@@ -350,11 +404,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RecipeListApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RecipeListApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -378,11 +434,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"RecipeListApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RecipeListApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

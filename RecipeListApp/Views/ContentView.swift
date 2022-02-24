@@ -18,7 +18,7 @@ struct ContentView: View {
             VStack (alignment: .leading) {
                 
                 Text("All Recipes")
-                    .font(.largeTitle)
+                    .font(AppFonts.largeTitle)
                     .fontWeight(.bold)
                     .padding(.top,50)
                 
@@ -42,6 +42,7 @@ struct ContentView: View {
                                     VStack (alignment: .leading, spacing: 5) {
                                         Text(recipe.name)
                                             .foregroundColor(.black)
+                                            .font(AppFonts.regular)
                                         RecipeHighlightsView(highlights: recipe.highlights)
                                             .font(.caption)
                                             .foregroundColor(.gray)

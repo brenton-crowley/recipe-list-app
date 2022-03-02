@@ -13,49 +13,52 @@ class DataService {
         
         // Parse Local json file
         
-        
-        guard let pathString = Bundle.main.path(forResource: "recipes", ofType: "json") else {
-
-            return [Recipe]()
-        }
-
-        let url = URL(fileURLWithPath: pathString)
-
-        // create a data object
-        do {
-            // get a url path to the json file
-            let data = try Data(contentsOf: url)
-
-            // Decode the data with a json decoder
-            let decoder = JSONDecoder()
-
-            do {
-                let recipeData = try decoder.decode([Recipe].self, from: data)
-
-                // add the new unique ids
-
-                for recipe in recipeData {
-                    recipe.id = UUID()
-                    
-                    for ingredient in recipe.ingredients {
-                        ingredient.id = UUID()
-                    }
-                }
-
-                return recipeData
-
-            } catch {
-                print(error)
-            }
-
-        } catch  {
-            print(error)
-        }
-            
-        
-        
-        // return the recipes.
         return [Recipe]()
+        
+        //return getJSONDataObjectForResourceName("recipes", for: [RecipeJSON].self)
+        
+//        guard let pathString = Bundle.main.path(forResource: "recipes", ofType: "json") else {
+//
+//            return [Recipe]()
+//        }
+//
+//        let url = URL(fileURLWithPath: pathString)
+//
+//        // create a data object
+//        do {
+//            // get a url path to the json file
+//            let data = try Data(contentsOf: url)
+//
+//            // Decode the data with a json decoder
+//            let decoder = JSONDecoder()
+//
+//            do {
+//                let recipeData = try decoder.decode([Recipe].self, from: data)
+//
+//                // add the new unique ids
+//
+//                for recipe in recipeData {
+//                    recipe.id = UUID()
+//
+//                    for ingredient in recipe.ingredients {
+//                        ingredient.id = UUID()
+//                    }
+//                }
+//
+//                return recipeData
+//
+//            } catch {
+//                print(error)
+//            }
+//
+//        } catch  {
+//            print(error)
+//        }
+//
+//
+//
+//        // return the recipes.
+//        return [Recipe]()
         
     }
         

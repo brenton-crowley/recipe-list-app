@@ -18,7 +18,8 @@ struct RecipeDetailView: View {
         ScrollView() {
             VStack (alignment:.leading) {
                 // MARK: Image
-                Image(recipe.image)
+                let image = UIImage(data: recipe.image ?? Data()) ?? UIImage()
+                Image(uiImage: image)
                     .resizable()
                     .scaledToFill()
                 
@@ -49,7 +50,7 @@ struct RecipeDetailView: View {
                         .font(AppFonts.title)
                         .bold()
                         .padding(.vertical, 2)
-                    ForEach(recipe.ingredients) { ingredient in
+                    ForEach(recipe.ingredients?.allObjects as! [Ingredient]) { ingredient in
                         
                         let portion = RecipeModel.calculatedServingSizeForIngredient(
                             ingredient,

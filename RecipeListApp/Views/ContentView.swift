@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @Environment(\.managedObjectContext) private var viewContext
     @EnvironmentObject var recipeModel:RecipeModel
     
     var body: some View {
@@ -31,8 +32,8 @@ struct ContentView: View {
                                     .navigationBarTitle(recipe.name)
                             } label: {
                                 HStack(spacing: 20.0) {
-                                    
-                                    Image(recipe.image)
+                                    let image = UIImage(data: recipe.image ?? Data()) ?? UIImage() 
+                                    Image(uiImage: image)
                                         .resizable()
                                         .scaledToFill()
                                         .frame(width: 50, height: 50)

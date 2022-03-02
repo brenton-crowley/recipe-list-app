@@ -10,6 +10,7 @@ import SwiftUI
 struct RecipeFeaturedView: View {
     
     @EnvironmentObject var recipeModel:RecipeModel
+    @Environment(\.managedObjectContext) private var viewContext
     @State var isDetailViewShowing = false
     @State var selectedTab:Int = 0
     
@@ -44,7 +45,8 @@ struct RecipeFeaturedView: View {
                                     .foregroundColor(.white)
                                 
                                 VStack (spacing: 0) {
-                                    Image(recipe.image)
+                                    let image = UIImage(data: recipe.image ?? Data()) ?? UIImage()
+                                    Image(uiImage: image)
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
                                         .clipped()

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Recipe:Identifiable, Decodable {
+class RecipeJSON:Identifiable, Decodable {
     
     var id:UUID?
     var name:String
@@ -18,7 +18,7 @@ class Recipe:Identifiable, Decodable {
     var cookTime:String
     var totalTime:String
     var servings:Int
-    var ingredients:[Indgredient]
+    var ingredients:[IngredientJSON]
     var highlights:[String]
     var directions:[String]
     // If you don't care about some of the data,
@@ -26,7 +26,7 @@ class Recipe:Identifiable, Decodable {
     
 }
 
-class Indgredient:Identifiable, Decodable {
+class IngredientJSON:Identifiable, Decodable {
     
     var id:UUID?
     var name:String

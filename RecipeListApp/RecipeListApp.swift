@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct RecipeListApp: App {
+    
+    let persistenceController = PersistenceController.shared
+    
     var body: some Scene {
         WindowGroup {
-            RecipeTabView()
+            RecipeTabView().environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

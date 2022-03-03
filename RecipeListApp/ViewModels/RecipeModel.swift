@@ -9,12 +9,82 @@ import SwiftUI
 
 class RecipeModel:ObservableObject {
     
-    @Published var recipes = [Recipe]()
+    //    @Published var recipes = [Recipe]()
+    @FetchRequest(sortDescriptors: []) var recipes:FetchedResults<Recipe>
+    let viewContext = PersistenceController.shared.container.viewContext
     
     init() {
         
-        self.recipes = DataService.getLocalData()
+      
         
+        // Check if we have preloaded the data to core data
+        checkLoadedData()
+        
+        
+    }
+    
+    func checkLoadedData() {
+        
+        // Check local storage for a flag
+        let status = UserDefaults.standard.bool(forKey: Constants.isDataPreloaded)
+                
+        // If false, parse local json and load into coredata
+        if !status {
+            preloadLocalData()
+        }
+        
+        
+    }
+    
+    func preloadLocalData() {
+        
+        // Parse the local json file
+        let localRecipes = DataService.getLocalData()
+        
+        // create core data objects
+        for r in localRecipes {
+            
+            let recipe = Recipe(context: viewContext)
+            recipe.id = UUID()
+            recipe.name = r.name
+            recipe.cookTime = r.cookTime
+            recipe.directions = r.directions
+            recipe.featured = r.featured
+            recipe.image = UIImage(named: r.image)?.pngData()
+            recipe.name = r.name
+            recipe.prepTime = r.prepTime
+            recipe.servings = r.servings
+            recipe.summary = r.description
+            recipe.totalTime = r.totalTime
+            recipe.highlights = r.highlights
+            
+            for ingredient in r.ingredients {
+                
+                let i = Ingredient(context: viewContext)
+                
+                i.id = UUID()
+                i.denom = ingredient.denom ?? 1
+                i.name = ingredient.name
+                i.num = ingredient.num ?? 1
+                i.unit = ingredient.unit
+                
+                recipe.addToIngredients(i)
+                
+            }
+            
+        }
+        
+        
+        // save into core data
+        do {
+            try viewContext.save()
+
+            // set local storage flag
+            UserDefaults.standard.setValue(true, forKey: Constants.isDataPreloaded)
+        } catch {
+            print(error)
+        }
+
     }
     
     static func calculatedServingSizeForIngredient(_ ingredient:Ingredient, forRecipeServings recipeServings:Int, selectedServing targetServings:Int) -> String {

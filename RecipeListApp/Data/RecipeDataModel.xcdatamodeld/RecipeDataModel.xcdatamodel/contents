@@ -10,20 +10,20 @@
     </entity>
     <entity name="Recipe" representedClassName="Recipe" syncable="YES">
         <attribute name="cookTime" attributeType="String"/>
-        <attribute name="directions" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="directions" optional="YES" attributeType="Transformable" customClassName="[String]"/>
         <attribute name="featured" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="highlights" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="highlights" optional="YES" attributeType="Transformable" customClassName="[String]"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="image" optional="YES" attributeType="Binary"/>
         <attribute name="name" attributeType="String"/>
-        <attribute name="prepTime" optional="YES" attributeType="String"/>
+        <attribute name="prepTime" attributeType="String"/>
         <attribute name="servings" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="summary" attributeType="String"/>
         <attribute name="totalTime" attributeType="String"/>
         <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ingredient" inverseName="recipe" inverseEntity="Ingredient"/>
     </entity>
     <elements>
-        <element name="Recipe" positionX="-63" positionY="-18" width="128" height="209"/>
         <element name="Ingredient" positionX="-54" positionY="63" width="128" height="119"/>
+        <element name="Recipe" positionX="-63" positionY="-18" width="128" height="209"/>
     </elements>
 </model>

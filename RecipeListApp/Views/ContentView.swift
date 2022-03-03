@@ -9,8 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @Environment(\.managedObjectContext) private var viewContext
-    @EnvironmentObject var recipeModel:RecipeModel
+//    @EnvironmentObject var recipeModel:RecipeModel
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)]) private var recipes:FetchedResults<Recipe>
+    @State private var filterBy = ""
+    @FocusState private var searchIsFocused:Bool
+    
+    private var filteredRecipes:[Recipe] {
+        
+        if filterBy.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            // No filtered text so return all
+            return Array(recipes)
+        } else {
+            // Filter by the new search term
+            return recipes.filter( {$0.name.contains(filterBy)} )
+        }
+        
+    }
     
     var body: some View {
         
@@ -23,9 +37,16 @@ struct ContentView: View {
                     .fontWeight(.bold)
                     .padding(.top,50)
                 
+                SearchBarView(text: $filterBy)
+                    .padding(.bottom)
+                    .focused($searchIsFocused)
+                    .onTapGesture {
+                        searchIsFocused = true
+                    }
+                
                 ScrollView {
                     LazyVStack (alignment: .leading) {
-                        ForEach(recipeModel.recipes) { recipe in
+                        ForEach(filteredRecipes) { recipe in
                             
                             NavigationLink {
                                 RecipeDetailView(recipe: recipe)
@@ -54,7 +75,11 @@ struct ContentView: View {
                         }.navigationBarHidden(true)
                     }
                 }
-            }.padding()
+            }
+            .padding()
+            .onTapGesture {
+                searchIsFocused = false
+            }
         }
         
     }

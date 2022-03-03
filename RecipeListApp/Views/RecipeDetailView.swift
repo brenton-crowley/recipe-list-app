@@ -50,7 +50,7 @@ struct RecipeDetailView: View {
                         .font(AppFonts.title)
                         .bold()
                         .padding(.vertical, 2)
-                    ForEach(recipe.ingredients?.allObjects as! [Ingredient]) { ingredient in
+                    ForEach(recipe.ingredients.allObjects as! [Ingredient]) { ingredient in
                         
                         let portion = RecipeModel.calculatedServingSizeForIngredient(
                             ingredient,
@@ -70,18 +70,23 @@ struct RecipeDetailView: View {
                             .font(AppFonts.title)
                             .bold()
                             .padding(.vertical, 2)
-                        ForEach(recipe.directions.indices, id: \.self) { index in
+                        
+                        if let directions = recipe.directions {
                             
-                            let direction = recipe.directions[index]
-                            
-                            HStack (alignment: .top) {
-                                Text("Step \(index+1)")
-                                    .font(AppFonts.regularBold)
-                                Text("\(direction)")
-                                    .padding(.bottom, 1)
-                                    .font(AppFonts.regular)
+                            ForEach(directions.indices, id: \.self) { index in
+                                
+                                let direction = directions[index]
+                                
+                                HStack (alignment: .top) {
+                                    Text("Step \(index+1)")
+                                        .font(AppFonts.regularBold)
+                                    Text("\(direction)")
+                                        .padding(.bottom, 1)
+                                        .font(AppFonts.regular)
+                                }
                             }
                         }
+                        
                     }
                 }.padding()
             }

@@ -2,7 +2,7 @@
 //  Recipe+CoreDataProperties.swift
 //  RecipeListApp
 //
-//  Created by Brent on 2/3/2022.
+//  Created by Brent on 3/3/2022.
 //
 //
 
@@ -16,18 +16,18 @@ extension Recipe {
         return NSFetchRequest<Recipe>(entityName: "Recipe")
     }
 
-    @NSManaged public var id: UUID?
-    @NSManaged public var name: String
-    @NSManaged public var featured: Bool
-    @NSManaged public var image: Data?
-    @NSManaged public var summary: String
     @NSManaged public var cookTime: String
-    @NSManaged public var totalTime: String
-    @NSManaged public var servings: Int
-    @NSManaged public var highlights: [String]
     @NSManaged public var directions: [String]
+    @NSManaged public var featured: Bool
+    @NSManaged public var highlights: [String]
+    @NSManaged public var id: UUID?
+    @NSManaged public var image: Data?
+    @NSManaged public var name: String
     @NSManaged public var prepTime: String
-    @NSManaged public var ingredients: NSSet?
+    @NSManaged public var servings: Int
+    @NSManaged public var summary: String
+    @NSManaged public var totalTime: String
+    @NSManaged public var ingredients: NSSet
 
 }
 

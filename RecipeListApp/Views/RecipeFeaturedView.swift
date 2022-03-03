@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct RecipeFeaturedView: View {
-    
-    @EnvironmentObject var recipeModel:RecipeModel
-    @Environment(\.managedObjectContext) private var viewContext
+        
+//    @EnvironmentObject var recipeModel:RecipeModel
     @State var isDetailViewShowing = false
     @State var selectedTab:Int = 0
     
-    var featuredRecipes:[Recipe] { recipeModel.recipes.filter({ $0.featured == true}) }
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)],
+                  predicate: NSPredicate(format: "featured == true")) var featuredRecipes:FetchedResults<Recipe>
     
     var body: some View {
         

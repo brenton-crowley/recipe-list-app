@@ -7,32 +7,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "AD83EA8C-72BD-47FF-84C1-4A87C2FA02F8"
+            uuid = "EEDA6117-D5A0-4FC9-9A84-68C31B88DD50"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RecipeListApp/Services/DataService.swift"
+            filePath = "RecipeListApp/ViewModels/RecipeModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "getLocalData()"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "preloadLocalData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B8A6F855-9C6D-4D47-A7AB-7C9C1CCFD458"
+            uuid = "FFA07760-ACD0-4CCB-BAD6-815B3EBBD235"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RecipeListApp/Services/DataService.swift"
+            filePath = "RecipeListApp/ViewModels/RecipeModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "getLocalData()"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "preloadLocalData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "19B829D0-A44E-4070-8502-775D90CCA39D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RecipeListApp/ViewModels/RecipeModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "preloadLocalData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
